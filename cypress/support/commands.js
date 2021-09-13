@@ -21,8 +21,8 @@ Cypress.Commands.add("loginViaRequest", () => {
     "Giovanna74",
     "Jessyca.Kuhic",
   ];
-  cy.clearLocalStorage();
-  cy.clearCookies();
+  /* cy.clearLocalStorage();
+  cy.clearCookies(); */
   cy.intercept("POST", "/login").as("loginUser");
   // cy.intercept("GET", "/checkAuth").as("getUserProfile");
   cy.visit("/signin").then(() => {

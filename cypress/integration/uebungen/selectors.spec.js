@@ -14,11 +14,11 @@ context("uebung zu folien", () => {
       cy.get("a");
 
       /** Finde den Bereich MINE*/
-      cy.get('a[href="/personal"]');
+      cy.get('a[href="/p"]');
       /** finde den Bereich FRIENDS*/
-      cy.get('a[href="/contacts"]');
+      cy.get('a[href="/c"]');
       /** finde den Bereich EVERYONE*/
-      cy.get('a[href="/"]');
+      cy.get('a[href="???"]');
       /** Warum ist das hier nicht gut? */
     });
 
@@ -31,46 +31,11 @@ context("uebung zu folien", () => {
       cy.get('[data-test="sidenav-toggle"]');
 
       /** Finde den Bereich MINE*/
-      cy.get('[data-test="nav-public-tab"]');
+      cy.get("[data-test= ???]");
       /** Finde den Bereich FRIENDS*/
-      cy.get("[data-test=nav-contacts-tab]");
+      cy.get("[data-test= ???]");
       /** Finde den Bereich EVERYONE*/
-      cy.get("[data-test=nav-personal-tab]");
-    });
-  });
-
-  describe("example cypress todo app", () => {
-    beforeEach(() => {
-      cy.visit("https://example.cypress.io/todo");
-    });
-
-    it("selectors", () => {
-      /** By class */
-      cy.get(".navbar-brand");
-
-      /** By id */
-      cy.get("#navbar");
-
-      /** Finde weiter Element ob mit attribute class oder id */
-      /** Finde die TODO List mit ihren Unterelementen (ul.todo-list > ...). 
-       * Es soll ein Array auf <li> elementen sein.*/
-      cy.get('ul');
-
-      /** Finde die Filter unter der TODO-List mit ihren Unterelementen (ul.filters > ...). 
-       * Es soll ein Array auf <li> elementen sein.*/
-      cy.get('ul');
-
-    });
-  
-    it("cypress testing library", () => {
-      /** By text */
-      cy.findByText('Cypress API');
-      cy.findByText('Walk the dog')
-      /** Welche Elemente lassen sich noch finden ByText. */
-
-      /** By placeholder */
-      cy.findByPlaceholderText('What needs to be done?');
-      
+      cy.get("[data-test= ???]");
     });
   });
 });
