@@ -1,5 +1,4 @@
 context("uebung zu folien", () => {
-
   describe("vorstellung selectoren", () => {
     beforeEach(() => {
       cy.loginViaRequest();
@@ -18,7 +17,7 @@ context("uebung zu folien", () => {
       /** finde den Bereich FRIENDS*/
       cy.get('a[href="/c"]');
       /** finde den Bereich EVERYONE*/
-      cy.get('a[href="???"]');
+      cy.get('a[href="?"]');
       /** Warum ist das hier nicht gut? */
     });
 

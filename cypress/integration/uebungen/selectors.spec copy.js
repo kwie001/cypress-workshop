@@ -1,5 +1,4 @@
 context("uebung zu folien", () => {
-
   describe("vorstellung selectoren", () => {
     beforeEach(() => {
       cy.loginViaRequest();
@@ -52,32 +51,29 @@ context("uebung zu folien", () => {
       cy.get("#navbar");
 
       /** Finde weiter Element ob mit attribute class oder id */
-      /** Finde die TODO List mit ihren Unterelementen (ul.todo-list > ...). 
+      /** Finde die TODO List mit ihren Unterelementen (ul.todo-list > ...).
        * Es soll ein Array auf <li> elementen sein.*/
-      cy.get('ul');
+      cy.get("ul");
 
-      /** Finde die Filter unter der TODO-List mit ihren Unterelementen (ul.filters > ...). 
+      /** Finde die Filter unter der TODO-List mit ihren Unterelementen (ul.filters > ...).
        * Es soll ein Array auf <li> elementen sein.*/
-      cy.get('ul');
-
+      cy.get("ul");
     });
-  
+
     it("cypress testing library", () => {
       /** By text */
-      cy.findByText('Cypress API');
-      cy.findByText('Walk the dog')
+      cy.findByText("Cypress API");
+      cy.findByText("Walk the dog");
       /** Welche Elemente lassen sich noch finden ByText. */
 
       /** By placeholder */
-      cy.findByPlaceholderText('What needs to be done?');
-      
+      cy.findByPlaceholderText("What needs to be done?");
     });
   });
 
   describe("besuche eine webseite", () => {
-    it("und suche dort nach verschiedenen Elementen", () =>{
-      cy.visit('<web-address>');
-
-    })
-  })
+    it("und suche dort nach verschiedenen Elementen", () => {
+      cy.visit("<web-address>");
+    });
+  });
 });
