@@ -1,4 +1,4 @@
-context("uebung zu folien", () => {
+context("Übung zu Folien", () => {
   describe("Aktionen auf Elementen", () => {
     beforeEach(() => {
       cy.loginViaRequest();
@@ -16,13 +16,19 @@ context("uebung zu folien", () => {
       /** Finde andere Tabs und klick drauf. */
 
       /** Type() */
-      /** Klicke auf den NEW Button.
-       * Selektiere das Suchfeld.
-       * Benutze clear() vor type() und tippe ein Devon Becker.
+      /** Klicke auf den 'My Account' Button. 
+       * Ändere die Benutzerdaten: Vor- und Nachname, E-Mail und Telefon mit eigenen Infos.
+       * Benutze clear() vor type().
        */
-      cy.findByRole("button", { name: /NEW/i }).click();
-      cy.findByPlaceholderText("Search...").clear().type("Devon Becker");
-      cy.wait(3000).get('[data-test=users-list]').first().click();
+      cy.findByRole("button", { name: /My/i }).click();
+      cy.findByPlaceholderText("?").clear().type("?");
+      /** Es ist nicht nötig die Änderungen zu dem Nutzer abzuspeichern, deshalb muss du nicht auf den 'Save' Button klicken. */
+      
+    });
+  });
+});
+
+
 
       /** Kommentiere die naechste Zeile aus. */
       //cy.wait(3000).get('[data-test=users-list]').first().click();
@@ -35,6 +41,3 @@ context("uebung zu folien", () => {
 
       /** Finde den Button Pay und klicke drauf. */
       //cy.findByRole('button', {name: /PAY/i}).click()
-    });
-  });
-});
