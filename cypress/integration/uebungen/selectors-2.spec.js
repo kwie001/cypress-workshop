@@ -12,7 +12,7 @@ context("uebung zu folien", () => {
       cy.get("#navbar");
 
       /** By contains */
-      cy.contains('Walk the dog');
+      cy.contains("Walk the dog");
       /** Finde den Filter Completed mit cy.contains() */
       /** Suche weitere Elemeten mit cy.contains() */
 
@@ -30,13 +30,13 @@ context("uebung zu folien", () => {
       cy.get("ul.").last();
 
       /** Use find() */
-      cy.get('.todo-list').find("input[type=checkbox]");
+      cy.get(".todo-list").find("input[type=checkbox]");
       /** Der Knopf zum loeschen der TODOs ist nicht sichtbar, trotzdem kannst du ihn finden. */
-      cy.get('.todo-list').find("button");
-      cy.get('.todo-list').find(".todo-button");
+      cy.get(".todo-list").find("button");
+      cy.get(".todo-list").find(".todo-button");
 
       /** Use parent() */
-      cy.contains('Walk the dog').parent().find("input[type=checkbox]");
+      cy.contains("Walk the dog").parent().find("input[type=checkbox]");
       /** Finde die Checkbox fuer das 1. TODO */
       cy.contains("?");
 
