@@ -21,8 +21,8 @@ context("uebung zu folien", () => {
        * Benutze clear() vor type() und tippe ein Devon Becker.
        */
       cy.findByRole("button", { name: /NEW/i }).click();
-      //cy.findByPlaceholderText("Search...").clear().type("Devon Becker");
-      //cy.wait(3000).get('[data-test=users-list]').first().click();
+      cy.findByPlaceholderText("Search...").clear().type("Devon Becker");
+      cy.wait(3000).get('[data-test=users-list]').first().click();
 
       /** Kommentiere die naechste Zeile aus. */
       //cy.wait(3000).get('[data-test=users-list]').first().click();

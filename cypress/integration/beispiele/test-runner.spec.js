@@ -1,15 +1,17 @@
 context("beispiele zu folien", () => {
   describe("vorstellung test runner", () => {
-    it("besuchen der loginseite", () => {
+    it("Loginseite", () => {
       cy.visit("/signin");
       cy.url().should("include", "signin");
       cy.get("form").should("exist");
-      cy.get("#username").clear().type("Katharina_Bernier");
+      /** Du brauchst einen gültigen UserName */
+      cy.get("#username").clear().type("Cecilia_Hegmann95");
+      /** Passwort ist für alle User gleich. */
       cy.get("#password").clear().type("s3cret");
       cy.get('[data-test="signin-submit"]').should("be.enabled");
     });
 
-    it("besuchen der registrierungsseite", () => {
+    it("Registrierungsseite", () => {
       cy.visit("/signup");
       cy.url().should("include", "signup");
       cy.get("form").should("exist");
@@ -22,7 +24,7 @@ context("beispiele zu folien", () => {
       cy.get("@user").should("have.value", "Super Hero");
     });
 
-    it("erfolgriech einloggen", () => {
+    it("Login erfolgreich", () => {
       cy.visit("/signin");
       cy.url().should("include", "signin");
       cy.get("form").should("exist");

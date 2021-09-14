@@ -13,12 +13,7 @@ import "@testing-library/cypress/add-commands";
 Cypress.Commands.add("loginViaRequest", () => {
   const password = "s3cret";
   const users = [
-    "Katharina_Bernier",
-    "Tavares_Barrows",
-    "Allie2",
-    "Giovanna74",
-    "Jessyca.Kuhic",
-  ];
+    "Trenton42", "Kameron_Rice", "Camden.Maggio98"];
   cy.clearLocalStorage();
   cy.clearCookies();
   cy.intercept("POST", "/login").as("loginUser");
@@ -27,7 +22,7 @@ Cypress.Commands.add("loginViaRequest", () => {
     cy.url().should("include", "/signin");
   });
   cy.window().then((win) =>
-    win.authService.send("LOGIN", { username: users[3], password: password })
+    win.authService.send("LOGIN", { username: users[2], password: password })
   );
   cy.wait("@loginUser").then((loginUser) => {
     // cy.log(`logged in with userId: ${loginUser.response.body.user.id}`);
