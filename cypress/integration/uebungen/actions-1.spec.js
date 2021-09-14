@@ -26,7 +26,7 @@ context("uebung zu folien", () => {
 
       /** Kommentiere die naechste Zeile aus. */
       //cy.wait(3000).get('[data-test=users-list]').first().click();
-      
+
       /** Danach Selektiere das Felder 'Amount' und tippe ein 10.
        * selektiere das Feld 'Add a note 'und tippe ein Pizza Friday.
        */
