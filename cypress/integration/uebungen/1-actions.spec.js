@@ -25,19 +25,15 @@ context("Übung zu Folien", () => {
       /** Es ist nicht nötig die Änderungen zu dem Nutzer abzuspeichern, deshalb muss du nicht auf den 'Save' Button klicken. */
       
     });
+
+    it("Fortgeschritten - eine neue Transaktion anlegen", () => {
+      /** Versuche eine neue Transaktion anzulegen, in dem du auf 'NEW' Button klickst, eine Person auswählst, einen Betrag und ein Beschreibung hinzufügst.
+       * Die Werkzeuge dafür hast du bereits kennengelernt.
+       * TIPP: Am Besten tippst du im Suchfeld einen kompletten Name aus der Liste ein, sodass nur die Person angezeigt wird in der Liste.
+       * Kommentiere die naechste Zeile aus.
+       * cy.wait(3000).get('[data-test=users-list]').first().click();
+       * Dadurch wird auf das erste Element/ die erste Person in der Liste geklickt.
+       */
+    })
   });
 });
-
-
-
-      /** Kommentiere die naechste Zeile aus. */
-      //cy.wait(3000).get('[data-test=users-list]').first().click();
-
-      /** Danach Selektiere das Felder 'Amount' und tippe ein 10.
-       * selektiere das Feld 'Add a note 'und tippe ein Pizza Friday.
-       */
-      //cy.findByPlaceholderText("Amount").clear().type("10");
-      //cy.findByPlaceholderText("Add a note").clear().type("Pizza Friday");
-
-      /** Finde den Button Pay und klicke drauf. */
-      //cy.findByRole('button', {name: /PAY/i}).click()
