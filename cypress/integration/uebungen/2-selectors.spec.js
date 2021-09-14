@@ -4,6 +4,10 @@ context("Übung zu folien", () => {
       cy.loginViaRequest();
     });
 
+    afterEach(() => {
+      cy.logoutViaUI();
+    });
+
     it("find by text", () => {
       /** cy.findByText() ist ähnlich wie cy.contains(). */
       cy.findByText("Home");

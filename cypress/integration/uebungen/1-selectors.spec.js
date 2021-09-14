@@ -4,6 +4,10 @@ context("Übung zu folien", () => {
       cy.loginViaRequest();
     });
 
+    afterEach(() => {
+      cy.logoutViaUI();
+    });
+    
     it("Element-tag (tag-name) selector", () => {
       /** By element-tag */
       cy.get("button");

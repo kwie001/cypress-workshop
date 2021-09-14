@@ -4,6 +4,10 @@ context("Übung zu Folien", () => {
       cy.loginViaRequest();
     });
 
+    afterEach(() => {
+      cy.logoutViaUI();
+    });
+
     it("Commands click(), clear(), type()", () => {
       /** Click() */
       cy.findByText("My Account").click();
@@ -27,6 +31,7 @@ context("Übung zu Folien", () => {
     });
 
     it("Fortgeschritten - eine neue Transaktion anlegen", () => {
+      cy.log('Eine neue Transaktion anlegen')
       /** Versuche eine neue Transaktion anzulegen, in dem du auf 'NEW' Button klickst, eine Person auswählst, einen Betrag und ein Beschreibung hinzufügst.
        * Die Werkzeuge dafür hast du bereits kennengelernt.
        * TIPP: Am Besten tippst du im Suchfeld einen kompletten Name aus der Liste ein, sodass nur die Person angezeigt wird in der Liste.

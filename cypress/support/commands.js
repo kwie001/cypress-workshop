@@ -12,23 +12,26 @@ import "@testing-library/cypress/add-commands";
 
 Cypress.Commands.add("loginViaRequest", () => {
   const password = "s3cret";
-  const users = [
-    "Trenton42", "Kameron_Rice", "Camden.Maggio98"];
+  const users = [ "Maximillia74", "Kayleigh93", "Salma_King57", "Maymie.Hamill38", "Jamie.Legros47"];
+  
   cy.clearLocalStorage();
   cy.clearCookies();
+  
   cy.intercept("POST", "/login").as("loginUser");
-  // cy.intercept("GET", "/checkAuth").as("getUserProfile");
-  cy.visit("/signin").then(() => {
-    cy.url().should("include", "/signin");
-  });
+  
+  cy.viewport(1536, 960);
+  cy.visit("/signin");
+  cy.url().should("include", "/signin");
+  
   cy.window().then((win) =>
-    win.authService.send("LOGIN", { username: users[2], password: password })
+    win.authService.send("LOGIN", { username: users[0], password: password })
   );
+  
   cy.wait("@loginUser").then((loginUser) => {
-    // cy.log(`logged in with userId: ${loginUser.response.body.user.id}`);
+    cy.log(`logged in with userId: ${loginUser.response.body.user.id}`);
     cy.url().should("not.include", "/signin");
     cy.get("[data-test=app-name-logo]").should("be.visible");
-  });
+  }).end();
 });
 
 Cypress.Commands.add("loginViaUI", () => {
@@ -58,3 +61,7 @@ Cypress.Commands.add("loginViaUI", () => {
     cy.get("[data-test=app-name-logo]").should("be.visible");
   });
 });
+
+Cypress.Commands.add("logoutViaUI", () => {
+  cy.findByRole('button', {name: /Logout/i}).click().end();
+})
