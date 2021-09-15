@@ -10,7 +10,7 @@ context("Übung zu Folien", () => {
     });
 
     it("Cypress sieht mehr als du", () => {
-      /** Korregiere hier die Assertions, sodass der Test grün wird. */
+      /** Korrigiere hier die Assertions, sodass der Test grün wird. */
       cy.findByRole("tab", { name: /EVERYONE/i }).should(
         "have.attr",
         "aria-selected",
@@ -29,7 +29,7 @@ context("Übung zu Folien", () => {
 
       cy.findAllByRole("button").should("have.length", 10);
 
-      /** Korregiere hier die Assertions, sodass der Test grün wird. */
+      /** Korrigiere hier die Assertions, sodass der Test grün wird. */
       cy.findByRole("button", { name: /My Account/ }).click();
       cy.url().should("include", "/user/settings");
       cy.contains("User Settings");

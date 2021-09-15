@@ -1,3 +1,7 @@
+context("Übung zu Folien", () => {
+  
+})
+
 /** https://docs.cypress.io/api/cypress-api/custom-commands#Syntax */
 
 //cy.findByRole("button", { name: /Bank Account/i }).click();
