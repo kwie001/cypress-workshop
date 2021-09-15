@@ -1,5 +1,5 @@
-context("beispiele zu folien", () => {
-  describe("vorstellung test runner", () => {
+context("Beispiele zu folien", () => {
+  describe("Vorstellung test runner", () => {
     it("Loginseite", () => {
       cy.visit("/signin");
       cy.url().should("include", "signin");

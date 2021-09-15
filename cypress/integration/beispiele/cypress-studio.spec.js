@@ -12,12 +12,7 @@ context("beispiele zu folien", () => {
     });
 
     it("ein neue transaktion durchfuehren", () => {
-      
+      /** Hier kannst du Cypress Studio ausprobieren. */
     });
   });
 });
-
-/** 
- * assertions am Ende des Tests
- * cy.get('[data-test=alert-bar-success]').should('be.visible').and('contain', 'Transaction Submitted'); 
- */
