@@ -8,7 +8,7 @@ context("Übung zu folien", () => {
     afterEach(() => {
       cy.logoutViaUI();
     });
-    
+
     it("Element-tag (tag-name) selector", () => {
       /** By element-tag */
       cy.get("button");
@@ -30,22 +30,22 @@ context("Übung zu folien", () => {
       cy.get('a[href="/user/settings"]').click();
       /** By ID wird mit # gesucht. */
       /** Finde das Element mit der ID=user-settings-firstName-input, cy.get('#id'). */
-      cy.get('#user-settings-firstName-input');
+      cy.get("#user-settings-firstName-input");
       /** Welche IDs haben die  andere Input-Felder?
        * Finde die anderen Elemente mit Hilfe der IDs.
        */
 
       /** By ID wird mit . gesucht. */
       /** Finde das Element mit der class=MuiButtonBase-root, cy.get('.class')*/
-      cy.get('?');
+      cy.get("?");
       /** Warum ist das hier nicht gut? */
 
       /** By cy.contains wird im DOM gesucht. */
       /** Finde das Element mit Notification, cy.contains('string')*/
-      cy.contains('?')
+      cy.contains("?");
       /** Finde andere Elemente die du visuell erkennen kannst. */
       /** Welche Elemente lassen sich gut finden, welche nicht? */
-    })
+    });
 
     it("Customed Attributs z.B. data-test", () => {
       /** By attribut */

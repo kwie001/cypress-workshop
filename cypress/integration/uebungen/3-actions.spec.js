@@ -22,18 +22,17 @@ context("Übung zu Folien", () => {
       /** Finde andere Tabs und klick drauf. */
 
       /** Type() */
-      /** Klicke auf den 'My Account' Button. 
+      /** Klicke auf den 'My Account' Button.
        * Ändere die Benutzerdaten: Vor- und Nachname, E-Mail und Telefon mit eigenen Infos.
        * Benutze clear() vor type().
        */
       cy.findByRole("button", { name: /My/i }).click();
       cy.findByPlaceholderText("?").clear().type("?");
       /** Es ist nicht nötig die Änderungen zu dem Nutzer abzuspeichern, deshalb muss du nicht auf den 'Save' Button klicken. */
-      
     });
 
     it("Fortgeschritten - eine neue Transaktion anlegen", () => {
-      cy.log('Eine neue Transaktion anlegen')
+      cy.log("Eine neue Transaktion anlegen");
       /** Versuche eine neue Transaktion anzulegen, in dem du auf 'NEW' Button klickst, eine Person auswählst, einen Betrag und eine Beschreibung hinzufügst.
        * Die Werkzeuge dafür hast du bereits kennengelernt.
        * TIPP: Am Besten gibst du im Suchfeld einen kompletten Name ein, sodass nur diese Person angezeigt wird in der Liste und waehlst diese Person in der Liste.
@@ -41,6 +40,6 @@ context("Übung zu Folien", () => {
        * cy.wait(3000).get('[data-test=users-list]').first().click();
        * Jetzt kannst du den Betrag und die Beschreibung ergeanzen.
        */
-    })
+    });
   });
 });

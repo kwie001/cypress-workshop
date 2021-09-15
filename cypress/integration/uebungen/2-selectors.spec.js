@@ -23,11 +23,11 @@ context("Übung zu folien", () => {
     });
 
     it("find by placeholder", () => {
-      cy.get('[data-test=sidenav-user-settings]').click();
+      cy.get("[data-test=sidenav-user-settings]").click();
 
       /** Finde alle Inputfelder mit Hilfe der cy.findByPlaceholderText(). */
-      cy.findByPlaceholderText('First Name');
-      cy.findByPlaceholderText('?')
+      cy.findByPlaceholderText("First Name");
+      cy.findByPlaceholderText("?");
       /** Sind Placeholder immer vorhanden? */
     });
 
@@ -43,8 +43,8 @@ context("Übung zu folien", () => {
       /** Wie viele Tabs gibt es? */
       /** Finde den MINE Tab und weiter Tabs, wenn möglich.  */
 
-      /** cy.findAllByLabelText() 
-       * oder cy.findByLabelText() 
+      /** cy.findAllByLabelText()
+       * oder cy.findByLabelText()
        * bezieht sich auf das Attribut aria-label. */
       cy.findByLabelText("open drawer");
       /** Wann sind aria-labels wichtig? Vielleicht findest du noch andere Elemente. */

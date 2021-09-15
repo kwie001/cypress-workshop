@@ -1,4 +1,4 @@
-context("Beispiele zu folien", () => {
+context("Beispiele zu Folien", () => {
   describe("Vorstellung test runner", () => {
     it("Loginseite", () => {
       cy.visit("/signin");
