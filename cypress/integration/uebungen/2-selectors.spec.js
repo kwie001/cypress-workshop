@@ -1,5 +1,6 @@
 context("Übung zu folien", () => {
   describe("Vorstellung Cypress Testing Library", () => {
+    /** https://testing-library.com/docs/cypress-testing-library/intro/ */
     beforeEach(() => {
       cy.loginViaRequest();
     });

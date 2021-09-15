@@ -1,5 +1,6 @@
 context("Übung zu folien", () => {
   describe("Vorstellung selectoren", () => {
+    /** Dokumentation zu cy.get() https://docs.cypress.io/api/commands/get */
     beforeEach(() => {
       cy.loginViaRequest();
     });
@@ -17,7 +18,7 @@ context("Übung zu folien", () => {
       cy.get("a");
 
       /** Finde den Bereich MINE */
-      cy.get('a[href="/p"]');
+      cy.get('a[href="/personal"]');
       /** finde den Bereich FRIENDS */
       cy.get('a[href="/c"]');
       /** finde den Bereich EVERYONE */
@@ -29,7 +30,7 @@ context("Übung zu folien", () => {
       cy.get('a[href="/user/settings"]').click();
       /** By ID wird mit # gesucht. */
       /** Finde das Element mit der ID=user-settings-firstName-input, cy.get('#id'). */
-      cy.get('?');
+      cy.get('#user-settings-firstName-input');
       /** Welche IDs haben die  andere Input-Felder?
        * Finde die anderen Elemente mit Hilfe der IDs.
        */
