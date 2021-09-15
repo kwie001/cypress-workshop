@@ -8,7 +8,7 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 
-import '@testing-library/cypress/add-commands';
+import "@testing-library/cypress/add-commands";
 
 Cypress.Commands.add("loginViaRequest", () => {
   const password = "s3cret";
@@ -31,7 +31,7 @@ Cypress.Commands.add("loginViaRequest", () => {
 
   /** Du brauchst einen gültigen UserName */
   cy.window().then((win) =>
-    win.authService.send("LOGIN", { username: users[0], password: password })
+    win.authService.send("LOGIN", { username: users[1], password: password })
   );
 
   cy.wait("@loginUser")
