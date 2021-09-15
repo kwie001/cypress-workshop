@@ -58,7 +58,6 @@ context("Beispiele zu Folien", () => {
         amount: "12",
         decribtion: "Friday Pizza",
       };
-      
     });
   });
 });

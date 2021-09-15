@@ -101,14 +101,8 @@ Cypress.Commands.add("createNewBankAccount", (createNewBank) => {
   cy.get("[data-test=bankaccount-submit]").should("be.enabled").click();
 });
 
-Cypress.Commands.add("clickOnNewButton", () => {
-  
-});
+Cypress.Commands.add("clickOnNewButton", () => {});
 
-Cypress.Commands.add("selectFirstContactInList", () => {
-  
-});
+Cypress.Commands.add("selectFirstContactInList", () => {});
 
-Cypress.Commands.add("createPayment", (payment) => {
-  
-});
+Cypress.Commands.add("createPayment", (payment) => {});

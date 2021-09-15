@@ -1,6 +1,5 @@
 /** https://docs.cypress.io/api/cypress-api/custom-commands#Syntax */
 
-
 //cy.findByRole("button", { name: /Bank Account/i }).click();
 /* cy.url().should("include", "/bankaccount");
       cy.contains("Bank Account");
