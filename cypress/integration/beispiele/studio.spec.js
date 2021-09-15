@@ -5,7 +5,7 @@ context("beispiele zu folien", () => {
       cy.url().should("include", "signin");
       cy.get("form").should("exist");
       /** Du brauchst einen gültigen UserName */
-      cy.get("#username").clear().type("Cecilia_Hegmann95");
+      cy.get("#username").clear().type("Kayleigh93");
       /** Passwort ist für alle User gleich. */
       cy.get("#password").clear().type("s3cret");
       cy.get('[data-test="signin-submit"]').click();

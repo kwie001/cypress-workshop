@@ -9,7 +9,7 @@ it("should change username", function () {
   /* ==== Generated with Cypress Studio ==== */
   cy.visit("http://localhost:3000/signin");
   cy.get("#username").clear();
-  cy.get("#username").type("Katharina_Bernier");
+  cy.get("#username").type("Kayleigh93");
   cy.get("#password").clear();
   cy.get("#password").type("s3cret");
   cy.get(".PrivateSwitchBase-input-14").check();

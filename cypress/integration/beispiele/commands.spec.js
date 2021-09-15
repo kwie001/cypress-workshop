@@ -13,50 +13,52 @@ context("Beispiele zu Folien", () => {
       cy.logoutViaUI();
     });
 
-    it("Should delete bank account", () => {
-      const createNewBank = {
-        bank: "Bank to be deleted",
-        routing: "000001111",
-        account: "555556666",
+    it("Should create new payment", () => {
+      const payment = {
+        amount: "10",
+        decribtion: "Friday Drinks",
       };
 
-      cy.findByRole("button", { name: /Bank Account/i }).click();
-      /* cy.url().should("include", "/bankaccount");
-      cy.contains("Bank Account");
-      cy.get("[data-test=bankaccount-list]")
+      /* 
+      
+      cy.findByRole("button", { name: /NEW/i }).click();
+      cy.contains("Select Contact");
+      cy.contains("Payment");
+      cy.contains("Complete");
+      cy.findByPlaceholderText('Search...').should('have.value', '');
+      cy.url().should('include', '/transaction/new')
+      
+      */
+
+      /* 
+      
+      cy.get("[data-test=users-list]")
         .find("li")
         .should("have.length.above", 0)
-        .as("bankAccountsList");
-      cy.findByRole("button", { name: /CREATE/i }).click();
-      cy.contains("Create Bank Account");
-
-      cy.findByPlaceholderText("Bank Name")
-        .should("have.value", "")
-        .type(createNewBank.bank);
-
-      cy.findByPlaceholderText("Routing Number")
-        .should("have.value", "")
-        .type(createNewBank.routing);
-
-      cy.findByPlaceholderText("Account Number")
-        .should("have.value", "")
-        .type(createNewBank.account);
-
-      cy.get("[data-test=bankaccount-submit]").should("be.enabled").click();
-
+        .first()
+        .click(); 
       
+        */
 
-      cy.get("@bankAccountsList")
-        .should("have.length.above", 1)
-        .last()
-        .findByRole("button", { name: /DELETE/i })
-        .click().then(() => {
-            cy.wait(2000);
-            cy.contains("Bank to be deleted (Deleted)");
-        }) */
+      /* 
+      
+      cy.findByPlaceholderText('Amount').clear().type(payment.amount);
+      cy.findByPlaceholderText('Add a note').clear().type(payment.decribtion);
+      cy.findByRole('button', {name: /PAY/i}).should('be.enabled').click(); 
+      
+      */
 
-      /** Mit Custom Commands */
-      //cy.createNewBankAccount(createNewBank);
+      //cy.clickOnNewButton();
+      //cy.selectFirstContactInList();
+      //cy.createPayment(payment);
+    });
+
+    it("Should create new request", () => {
+      const request = {
+        amount: "12",
+        decribtion: "Friday Pizza",
+      };
+      
     });
   });
 });

@@ -29,6 +29,7 @@ Cypress.Commands.add("loginViaRequest", () => {
   cy.visit("/signin");
   cy.url().should("include", "/signin");
 
+  /** Du brauchst einen gültigen UserName */
   cy.window().then((win) =>
     win.authService.send("LOGIN", { username: users[0], password: password })
   );
@@ -55,7 +56,6 @@ Cypress.Commands.add("loginViaUI", () => {
   cy.clearLocalStorage();
   cy.clearCookies();
   cy.intercept("POST", "/login").as("loginUser");
-  // cy.intercept("GET", "/checkAuth").as("getUserProfile");
   cy.visit("/signin").then(() => {
     cy.url().should("include", "/signin");
   });
@@ -99,4 +99,16 @@ Cypress.Commands.add("createNewBankAccount", (createNewBank) => {
     .type(createNewBank.account);
 
   cy.get("[data-test=bankaccount-submit]").should("be.enabled").click();
+});
+
+Cypress.Commands.add("clickOnNewButton", () => {
+  
+});
+
+Cypress.Commands.add("selectFirstContactInList", () => {
+  
+});
+
+Cypress.Commands.add("createPayment", (payment) => {
+  
 });
