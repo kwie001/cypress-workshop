@@ -1,7 +1,7 @@
 context("beispiele zu folien", () => {
   describe("vorstellung cypress studio", () => {
     beforeEach(() => {
-      cy.visit("/signin");
+      cy.visit("http://localhost:3000/signin");
       cy.url().should("include", "signin");
       cy.get("form").should("exist");
       /** Du brauchst einen gültigen UserName */

@@ -26,7 +26,7 @@ Cypress.Commands.add("loginViaRequest", () => {
   cy.intercept("POST", "/login").as("loginUser");
 
   cy.viewport(1536, 960);
-  cy.visit("/signin");
+  cy.visit("http://localhost:3000/signin");
   cy.url().should("include", "/signin");
 
   /** Du brauchst einen gültigen UserName */
