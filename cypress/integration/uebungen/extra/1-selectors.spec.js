@@ -57,6 +57,10 @@ context("Übung zu folien", () => {
        * findByPlaceholderText()
        * findByRole()
        */
+
+      cy.findByText("Walk the dog");
+      cy.findByPlaceholderText("What needs to be done?");
+      cy.findByRole("button");
     });
   });
 });
