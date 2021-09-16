@@ -50,5 +50,13 @@ context("Übung zu folien", () => {
       /** Finde den Knopf zum loeschen des TODOS fuer das 1. TODO */
       cy.contains("?");
     });
+
+    it("Vorstellung Cypress Testing Library", () =>{
+      /**
+       * findByText()
+       * findByPlaceholderText()
+       * findByRole()
+       */
+    })
   });
 });

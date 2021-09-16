@@ -31,7 +31,7 @@ context("Übung zu folien", () => {
       /** Sind Placeholder immer vorhanden? */
     });
 
-    it("find by role, aria-label and ", () => {
+    it("find by role ", () => {
       /** cy.findAllByRole(), wenn Role ist definiert. */
       /** Wie viele Buttons gibt es? */
       cy.findAllByRole("button");
