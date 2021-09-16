@@ -38,8 +38,8 @@ context("Übung zu Folien", () => {
     });
 
     it.only("Fortgeschritten: delete a bank account", () => {
-      /** Dieser Test soll einen Bank Account löschen, 
-       * zunäcghst wird ein neuer Bank Account angelegt 
+      /** Dieser Test soll einen Bank Account löschen,
+       * zunäcghst wird ein neuer Bank Account angelegt
        * und dann soll dieser aus der Liste gelöscht werden. */
       const newBank = {
         bank: "Bank to delete",

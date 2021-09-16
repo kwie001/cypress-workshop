@@ -51,12 +51,12 @@ context("Übung zu folien", () => {
       cy.contains("?");
     });
 
-    it("Vorstellung Cypress Testing Library", () =>{
+    it("Vorstellung Cypress Testing Library", () => {
       /**
        * findByText()
        * findByPlaceholderText()
        * findByRole()
        */
-    })
+    });
   });
 });
